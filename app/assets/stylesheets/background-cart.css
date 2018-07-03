@@ -1,0 +1,24 @@
+html {
+  font: 16px/1.5 'Work Sans', sans-serif;
+  color: #444;
+}
+
+body {
+  background-color: #214;
+
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  font-weight: 200;
+  color: #dce;
+opacity: .1;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+pointer-events: none;
+}

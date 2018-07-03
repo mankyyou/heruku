@@ -1,0 +1,9 @@
+Dear <%= @order.name %>
+Cám ơn bạn đã đặt hàng tại AvengerGear.
+Giỏ hàng của bạn bao gồm:
+<hr>
+<%= render @order.line_items -%>
+
+Chúng tôi sẽ gọi bạn để xác nhận đơn hàng sớm nhất.
+
+<%= image_tag "https://static.xx.fbcdn.net/images/emoji.php/v9/fe8/1/32/1f633.png"%>

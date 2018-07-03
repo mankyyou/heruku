@@ -1,0 +1,59 @@
+<p id="notice">
+	<%= notice %>
+</p>
+<!-- hot or not-->
+<div  class="foo" data-delighter>
+<div class="container">
+	<div class="row">
+		<% @gears.each do |gear| %>
+			<%= link_to gear do %>
+				<div class="col-sm-4 ">
+					<div class="offer offer-radius offer-primary">
+							<%if (Time.now.to_i - gear.created_at.to_i < 2592000 )%>
+							<img class=""src="/assets/new.png " width="30px " height="30px " style="margin-left:20px;transform: rotate(90deg); ">
+								<%end%>
+								<%if gear.hot%>
+							<img class=""src="/assets/hot.png " width="30px " height="30px " style="margin-left:20px;transform: rotate(90deg); ">
+							<%end%>
+						
+								<div class="shape">
+									<div class="shape-text">
+										<%= number_to_currency(gear.price, precision: 0, unit: "$", separator: ",") %>
+									</div>
+								</div>
+								<div class="offer-content">
+									<h3 class="lead">
+										<%= gear.name.upcase  %>
+
+									</h3>
+									<p>Brandname:
+										<%= gear.brand.brandname%>
+
+									</p>
+									<p>Typename::
+										<%= gear.type.typename%>
+
+									</p>
+								</div>
+
+								<div>
+
+									<%= image_tag gear.image.url(:medium),:size=>"120x50",:class=>"img-gear"%>
+									<style>
+									.img-gear{margin-left:30%;}
+									</style>
+										<% end %>
+
+
+											<%= button_to 'Add to Cart', line_items_path(gear_id: gear),remote: true,:class=>"btn btn-info" %>
+
+								</div>
+					</div>
+
+				</div>
+				<% end %>
+	</div>
+	</div>
+	<%= will_paginate @gears%>
+<!--end-->
+

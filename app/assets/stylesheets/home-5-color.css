@@ -1,0 +1,65 @@
+/* color css */
+.home-5 .mainmenu ul li:hover ul.sub-menu li a:hover,.home-5 .mainmenu ul li:hover .mega-menu span a:hover,.home-5 .cart-total ul li .mini-cart-content .cart-img-details .cart-img-contaent h4:hover,.home-5 .pro-del a i:hover,.home-5 .product-content h5 a:hover,.home-5 span.recent-post-date,.post-info h3 a:hover,.home-5 .post-info a:hover,.home-5 span.test-title,.home-5 ul.footer-menu li a:hover,.home-5 .widget-contact ul li i,.home-5 .copyright p a,.home-5 .modal-product .product-info .price-box .special-price,.home-5 .modal-product .product-info .see-all:hover{
+  color: #0088CC!important;
+}
+.home-2 .mainmenu ul li ul.sub-menu li a,.home-2 .mainmenu ul li .mega-menu span a {
+  color: #9e9e9e!important;
+}
+
+
+/* background color */
+.home-5 .mini-cart-content p.cart-button-top a:hover ,.home-5 .action-buttons a:hover,.home-5 .newsletter input[type="submit"],.home-5 .action-buttons a:hover,.home-5 span.sale-text,.home-5 .owl-theme .owl-controls .owl-page span,.home-5 a.modal-view:hover,.home-5 .quick-add-to-cart .single_add_to_cart_button{
+  background: #0088CC!important;
+}
+
+/* search button */
+.home-2 .top-category ul li button {
+  background: #58B79D ;
+}
+.home-5 .top-category ul li input {
+  border-color: #ddd;
+}
+.home-5 .header-search{border-color:#ddd}
+.home-5 .cart-total,.home-5  .newsletter input[type="text"]{border: 1px solid #0088CC;}
+
+.home-5 .cart-total ul li .mini-cart-content {
+  border: 5px solid #0088CC;
+}
+.home-5 .tp-leftarrow.default:hover, .home-5 .tp-rightarrow.default:hover {
+  background: #0088CC;
+  border: 1px solid #0088CC!important;
+}
+.home-5 .action-buttons a:hover{background: #0088CC none repeat scroll 0 0;
+border-color: #0088CC;
+color: #fff;}
+
+
+/* curosel color */
+.home-5 .features-curosel.owl-theme .owl-controls .owl-buttons i,
+.home-5 .sale-curosel.owl-theme .owl-controls .owl-buttons i,
+.home-5 .category-curosel.owl-theme .owl-controls .owl-buttons i,
+.home-5 .recent-post-curosel.owl-theme .owl-controls .owl-buttons i,
+.home-5 .brand-curosel.owl-theme .owl-controls .owl-buttons i,
+.home-5 .category-curosel-home-3.owl-theme .owl-controls .owl-buttons i,
+.home-5 .recent-post-curosel-home-3.owl-theme .owl-controls .owl-buttons i,
+.home-5 .features-curosel-home-4.owl-theme .owl-controls .owl-buttons i,
+.home-5 .category-curosel-home-4.owl-theme .owl-controls .owl-buttons i,
+.home-5 .sale-product-curosel-home-4.owl-theme .owl-controls .owl-buttons i,
+.home-5 .category-curosel-home-5.owl-theme .owl-controls .owl-buttons i {
+  border: 1px solid #0088CC!important;
+  color: #0088CC!important;
+}
+.home-5 .features-curosel .owl-controls .owl-buttons i:hover,
+.home-5 .sale-curosel.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .category-curosel.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .recent-post-curosel.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .brand-curosel.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .category-curosel-home-3.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .recent-post-curosel-home-3.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .features-curosel-home-4.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .category-curosel-home-4.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .sale-product-curosel-home-4.owl-theme .owl-controls .owl-buttons i:hover,
+.home-5 .category-curosel-home-5.owl-theme .owl-controls .owl-buttons i:hover {
+  background: #0088CC;
+  color:#fff!important;
+}

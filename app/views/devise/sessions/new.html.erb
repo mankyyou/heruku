@@ -1,0 +1,67 @@
+<!--source css-->
+<link rel="stylesheet" href="/assets/login.css">
+
+<script src="/assets/login.js "></script>
+
+<!--End-->
+<br>
+<br>
+<br>
+<br>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="login-page">
+  <div class="form">
+   
+    <form class="login-form">
+    <div class="field">
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+   
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+  
+       <div class="actions">
+    <%= f.submit "Log in",:class=>"btn btn-link" %>
+  </div>
+    </form>
+     
+  </div>
+</div>
+
+<% end %>
+<%= render "devise/shared/links" %>
+<!--disappear css-->
+<style>
+.promotion-area {
+    display: none;
+}
+h3 {
+    display: none;
+}
+.w3-content.w3-display-container {
+    display: none;
+} 
+
+body{
+  background:  url("/assets/wallpaper-b.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#chipu_email {
+
+    color: black;
+
+}
+#chipu_password {
+
+    color: black;
+
+}
+</style>

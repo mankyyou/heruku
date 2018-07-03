@@ -1,0 +1,172 @@
+<p id="notice"><%= notice %></p>
+
+
+<!--
+<%= link_to 'Edit', edit_gear_path(@gear) %> |
+<%= link_to 'Back', gears_path %>
+-->
+<!--new -->
+<div class="alert alert-danger alert-dismissable">
+				<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> Đóng </button>
+				<h2 class="t-button"><span class="label label-danger">Chính sách ưu đãi khi mua hàng</span></h2>
+        <br>
+				<p>  Miễn phí giao hàng </p>
+				<p>  Mua hàng  </p>
+			
+			</div>
+<div id="ctl00_divCenter" class="col-main col-lg-9 col-xl-9 partner-main">
+	
+					        
+					        
+    
+<div class="Module Module-127"><div class="ModuleContent">
+<div id="ctl00_mainContent_ctl00_ctl00_pnlInnerWrap">
+		
+    
+    <div itemscope="itemscope" itemtype="http://schema.org/Product">
+  <div itemtype="http://schema.org/Organization" itemprop="brand" itemscope="itemscope">
+    <meta itemprop="name" content="Vortex">
+  </div>
+  <div class="block-productsDetail">
+    <div class="row">
+      <div class="col-xs-12 col-md-7 col-lg-7">
+        <a class="MagicZoom" id="imgProduct" data-options="zoomMode: off; cssClass: white-bg; hint: always; transitionEffect: false; lazyZoom: true; textExpandHint: Click phóng to" >
+          <figure class="mz-figure white-bg mz-hover-zoom mz-no-zoom"><%= image_tag @gear.image.url(:medium),:class=>"hover-img"%><div class="mz-lens" style="top: 0px; transform: translate(-10000px, -10000px);"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="position: absolute; top: 0px; left: 0px; width: 599.984px; height: 599.984px;"></div><div class="mz-hint"></div></figure>
+        <style>
+        .hover-img:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+        </style>
+        </a>
+        
+         <a class="order-prd" onclick="AjaxCheckout.prepareorder(this);return false;" data-productid="2301">  <%= button_to 'Add to Cart', line_items_path(gear_id: @gear),remote: true,:class=>"btn btn-warning" %></a>
+ 
+      </div>   
+      <h2><%= @gear.name.upcase %></h2>
+      <br>
+      <br>
+
+      <div class="col-xs-12 col-md-5 col-lg-5">
+        <div class="prd-content">
+            <h5 class="title">-Type: <%=link_to  @gear.type.typename.upcase, producttype_path(@gear.type.typename)%>		</h5>
+          
+          <div class="briefContent"></div>
+          <div class="brands prd-opt">
+          </div> <div class="brands prd-opt">
+            <h5 class="title">-Brand: <%=link_to @gear.brand.brandname.upcase, productbrand_path(@gear.brand.brandname)%></h5>
+           
+          </div></div> <div class="brands prd-opt">
+            <h5 class="title">-Inventory: <%= @gear.inventory %></h5>
+          </div>
+          <div class="prd-price prd-opt">
+            <div class="row">
+              <div class="col-xs-12" itemscope="itemscope" itemprop="offers" itemtype="http://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="VND">
+                <div class="price-new">
+                  <h5 class="title">-Prise:  <span class="new-price" itemprop="price"> <%= number_to_currency(@gear.price, precision: 0, unit: "$", separator: ",") %>				</span></h5>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row order-support">
+            <div class="col-xs-6">
+              <div class="order-submit">
+               
+              </div>
+               
+            
+            </div>
+           
+          </div>
+             <div>
+   <h5>Other type of gear same: </h5>
+             <%@types.each do |type|%>
+            <div class="button-square">
+               <div class="gradient"></div>
+            <%=link_to  type.typename.upcase, producttype_path(type.typename),:class=>"button-type"%>		     
+            </div>
+            <%end%>
+            <br>
+            <br>
+            <br>
+             <br>
+           
+             <h5>Other brand of gear same: </h5>
+             <%@brands.each do |brand|%>
+            <div class="button-square">
+               <div class="gradient"></div>
+            <%=link_to brand.brandname.upcase, productbrand_path(brand.brandname),:class=>"button-type"%>	     
+            </div>
+            <%end%>
+            <div>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="prd-desc">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="nav nav-tabs responsive" role="tablist">
+          <li class="nav-item">
+           <a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1" aria-controls="tab-1" aria-expanded="true">Digital information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" role="tab" data-toggle="tab" href="#tab-0" aria-controls="tab-0">Comment</a>
+          </li>
+        </ul>
+        <div class="tab-content responsive">
+          <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+            <div class="contentFull clearfix"><ul>
+      <%=raw @gear.description %>
+</ul></div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="tab-0">
+            <div class="comment-wrap">
+            <div id="ctl00_mainContent_ctl00_ctl00_comment_pnlFeedback" data-type="0" class="commentpanel commentpanel0">
+    <div class="journalTools">
+        <div class="journalEditor">
+            <div id="disqus_thread"></div>
+
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vuive.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    <div class="clear"></div>
+    
+    <div class="journalItems">
+        
+    </div>
+    
+</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!---->

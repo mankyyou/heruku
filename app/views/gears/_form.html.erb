@@ -1,0 +1,58 @@
+<%= form_for @gear, html: { multipart: true } do |form| %>
+
+  <% if gear.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(gear.errors.count, "error") %> prohibited this gear from being saved:</h2>
+
+      <ul>
+        <% gear.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+          <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+      <div class="field">
+        <%= form.label :name %>
+          <%= form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :description%>
+          <%= form.text_area :description ,:size=>"40x10" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :image%>
+
+          <%= form.file_field :image %>
+
+      </div>
+
+      <div class="field">
+        <%= form.label :price %>
+          <%= form.text_field :price %>
+      </div>
+
+      <div class="field">
+        <%= form.label :inventory %>
+          <%= form.text_field :inventory %>
+      </div>
+      
+      <div class="field">
+          <%= form.label :brand %>
+          <!-- <%= form.collection_select :brand, Brand.order(:brandname),:id,:brandname, include_blank: true %> -->
+          <%= form.select :brand_id, options_from_collection_for_select(Brand.all, :id, :brandname), {:include_blank => 'Please choose brand for gear'} %>
+      </div>
+      <div class="field">
+          <%= form.label :type %>
+          <!-- <%= form.collection_select(:type, Type.all, :id, :typename ) %> -->
+          <%= form.select :type_id, options_from_collection_for_select(Type.all, :id, :typename), {:include_blank => 'Please choose type for gear'} %>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+      <% end %>

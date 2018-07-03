@@ -1,0 +1,37 @@
+<p id="notice">
+    <%= notice %>
+</p>
+
+     <div class="container">
+	<div class="row">
+<% @loai.each do |gear| %>
+		<div class="col-sm-4 ">
+			<div class="offer offer-radius offer-primary">
+				<div class="shape">
+					<div class="shape-text">
+						 
+                         <%= number_to_currency(gear.price, precision: 0, unit: "$", separator: ",") %>					
+					</div>
+				</div>
+				<div class="offer-content">
+					<h3 class="lead">
+						 <%= gear.name %>
+					</h3>						
+					<p>
+						 <%= sanitize(gear.description) %>
+						
+					</p>
+				</div>
+                <div>
+                 <%= image_tag gear.image.url(:medium),:size=>"120x50"%>
+                   <%= button_to 'Add to Cart', line_items_path(gear_id: gear),remote: true,:class=>"btn btn-info" %>
+                  
+                </div>
+			</div>
+
+		</div>
+                        <% end %>
+</div>
+  	<%= will_paginate @loai%>
+
+
